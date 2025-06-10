@@ -8,6 +8,7 @@ public class findUniqueElements{
 
     public static boolean isUnique(String str){
 
+        
         Set<String> hashSet = new HashSet<>();
         String[] strArr = str.split("");
         for(String s : strArr){
