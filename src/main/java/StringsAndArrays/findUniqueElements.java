@@ -1,17 +1,16 @@
+package main.java.StringsAndArrays;
 
 import java.util.HashSet;
-import java.util.Hashtable;
 import java.util.Set;
 
-public class findUniqueElements{
+public class findUniqueElements {
 
-    public static boolean isUnique(String str){
-
+    public static boolean isUnique(String str) {
 
         Set<Character> hashSet = new HashSet<>();
         char[] strArr = str.toCharArray();
-        for(char s : strArr){
-            if(!hashSet.contains(s))
+        for (char s : strArr) {
+            if (!hashSet.contains(s))
                 hashSet.add(s);
             else
                 return false;
@@ -19,8 +18,8 @@ public class findUniqueElements{
         return true;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String str = "abacd";
-        System.out.println("isUnique :: "+isUnique(str));
+        System.out.println("isUnique :: " + isUnique(str));
     }
 }
