@@ -21,7 +21,7 @@ public class twoSum {
     // }
 
 
-    public static int[] twoSum(int[] nums, int target) {
+    public static int[] twoSums(int[] nums, int target) {
         int[] result = new int[2];
         int i = 0;
         int j = nums.length;
@@ -43,7 +43,7 @@ public class twoSum {
 
     public static void main(String[] args) {
      int[] nums = {3,3};
-        twoSum(nums,6);
+        twoSums(nums,6);
     }
     
 }
