@@ -8,19 +8,19 @@ public class checkDuplicateInArray {
 
         Set<Integer> hs = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
-            if(!hs.contains(nums[i])){
+            if (!hs.contains(nums[i])) {
                 hs.add(nums[i]);
-            }
-            else
+            } else
                 return true;
 
         }
+        System.out.println("hs= " + hs);
         return false;
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,3,1};
-        System.out.println("is duplicate: "+containsDuplicate(nums));
+        int[] nums = { 1, 2, 3, 1 };
+        System.out.println("is duplicate: " + containsDuplicate(nums));
     }
 
 }
