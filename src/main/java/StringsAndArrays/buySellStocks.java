@@ -2,14 +2,13 @@ package main.java.StringsAndArrays;
 
 public class buySellStocks {
     public static int maxProfit(int[] prices) {
-        int sum = 0;
-        for(int i=0; i< prices.length-1; i++){
-            if(prices[i] < prices[i+1]){
-                sum = sum + (prices[i+1] - prices[i]);
-            }
+        int minSoFar = prices[0];
+        int profit =0;
+        for(int i=0 ; i<prices.length-1;i++){
+            minSoFar = Math.min(prices[i],minSoFar);
+            profit = Math.max(profit,(prices[i] - minSoFar));
         }
-
-        return sum;
+        return profit;
     }
 
     public static void main(String[] args) {
