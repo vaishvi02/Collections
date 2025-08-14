@@ -14,15 +14,6 @@ public class longestCommonPrefix {
         return prefix;
     }
 
-    public static String findLongestCommonPrefix(String s) {
-
-
-
-        return "";
-    }
-
-
-
     public static void main(String[] args) {
         String[] strs = { "dog", "dracecar", "docar" };
         System.out.println(findLongestCommonPrefix(strs));

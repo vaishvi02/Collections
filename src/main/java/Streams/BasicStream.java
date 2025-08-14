@@ -60,6 +60,12 @@ public class BasicStream {
 //                                 Employee::getId , (t, u) -> t))));
 
         //System.out.println(empList.stream().distinct().collect(Collectors.toList()));
+
+        //Interview Q. find the latest project Hary is working on
+        System.out.println(empList.stream()
+                .filter(e -> e.getName().equals("Hary"))
+                .sorted(Comparator.comparing(Employee::getDate))
+                .findFirst().get().getDept().getDepartment());
     }
 }
 
@@ -119,7 +125,7 @@ class Employee{
         empList.add(new Employee(2, "Hary", new Department(22, "Ops"), "Manager","12-01-2024"));
         empList.add(new Employee(3, "Chris", new Department(23, "Sales"), "Senior Engineer","14-02-2024"));
         empList.add(new Employee(4, "Martin", new Department(24, "Sales"), "Data Head","07-01-2024"));
-        empList.add(new Employee(5, "Ben", new Department(25, "Data"), "Assistant Manager","10-05-2024"));
+        empList.add(new Employee(5, "Hary", new Department(25, "Data"), "Assistant Manager","10-05-2024"));
 
         return empList;
     }
