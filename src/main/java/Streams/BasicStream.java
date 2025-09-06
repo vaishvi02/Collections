@@ -1,7 +1,9 @@
 package main.java.Streams;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class BasicStream {
     
@@ -62,10 +64,15 @@ public class BasicStream {
         //System.out.println(empList.stream().distinct().collect(Collectors.toList()));
 
         //Interview Q. find the latest project Hary is working on
-        System.out.println(empList.stream()
-                .filter(e -> e.getName().equals("Hary"))
-                .sorted(Comparator.comparing(Employee::getDate))
-                .findFirst().get().getDept().getDepartment());
+//        System.out.println(empList.stream()
+//                .filter(e -> e.getName().equals("Hary"))
+//                .sorted(Comparator.comparing(Employee::getDate))
+//                .findFirst().get().getDept().getDepartment());
+
+
+        System.out.println(IntStream.rangeClosed(1,5).
+                filter(e -> e % 2 != 0).
+                reduce(1, (a,b) -> a*b));
     }
 }
 
